@@ -1,0 +1,313 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* 아주 밝은 회색 */
+    color: #333; /* 어두운 회색 텍스트 */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* 헤더 */
+.main-header {
+    background-color: #333; /* 어두운 회색 배경 */
+    color: #fff; /* 흰색 텍스트 */
+    padding: 1rem 0;
+    border-bottom: 3px solid #555;
+}
+
+.main-header h1 {
+    float: left;
+    margin: 0;
+    color: #fff;
+}
+
+.main-header nav {
+    float: right;
+}
+
+.main-header nav ul {
+    margin: 0;
+}
+
+.main-header nav ul li {
+    display: inline;
+    padding: 0 15px;
+}
+
+.main-header nav a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.main-header nav a:hover {
+    color: #ccc;
+}
+
+/* 히어로 섹션 */
+.hero {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #666 url('https://via.placeholder.com/1500x400/AAAAAA/FFFFFF?text=여행+배경+이미지') no-repeat center center/cover;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 텍스트 가독성을 위한 오버레이 */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* 버튼 */
+.btn {
+    display: inline-block;
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #777;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+/* 추천 여행지 섹션 */
+.recommendations {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.recommendations h2 {
+    margin-bottom: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #444;
+}
+
+/* 푸터 */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.main-footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+.main-footer .social-links a:hover {
+    color: #ccc;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .main-header h1,
+    .main-header nav {
+        float: none;
+        text-align: center;
+    }
+
+    .main-header nav ul li {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ==========================================================================
+   색상 팔레트 제안 (아래 주석을 해제하고 사용해 보세요!)
+   ========================================================================== */
+
+/*
+ * 팔레트 1: 자연의 평온함 (초록색, 베이지색 계열)
+ * 자연 친화적이고 편안한 느낌을 줍니다.
+ */
+/*
+body {
+    background-color: #F8F5ED;
+    color: #3A4F41;
+}
+.main-header {
+    background-color: #3A4F41;
+    border-bottom-color: #5C7B6F;
+}
+.main-header nav a:hover {
+    color: #A3B18A;
+}
+.hero {
+    background: #5C7B6F url('https://via.placeholder.com/1500x400/A3B18A/3A4F41?text=자연+배경+이미지') no-repeat center center/cover;
+}
+.btn {
+    background-color: #A3B18A;
+}
+.btn:hover {
+    background-color: #8B9E77;
+}
+.card {
+    background-color: #FFFFFF;
+    border-color: #DDE5B6;
+}
+.main-footer {
+    background-color: #3A4F41;
+}
+.main-footer .social-links a:hover {
+    color: #A3B18A;
+}
+*/
+
+/*
+ * 팔레트 2: 도시의 활기 (파란색, 주황색 계열)
+ * 현대적이고 활기찬, 모험적인 느낌을 줍니다.
+ */
+/*
+body {
+    background-color: #E0F2F7;
+    color: #2C3E50;
+}
+.main-header {
+    background-color: #2C3E50;
+    border-bottom-color: #3498DB;
+}
+.main-header nav a:hover {
+    color: #F39C12;
+}
+.hero {
+    background: #3498DB url('https://via.placeholder.com/1500x400/F39C12/2C3E50?text=도시+배경+이미지') no-repeat center center/cover;
+}
+.btn {
+    background-color: #F39C12;
+}
+.btn:hover {
+    background-color: #E67E22;
+}
+.card {
+    background-color: #FFFFFF;
+    border-color: #A9D9EE;
+}
+.main-footer {
+    background-color: #2C3E50;
+}
+.main-footer .social-links a:hover {
+    color: #F39C12;
+}
+*/
+
+/*
+ * 팔레트 3: 우아한 고요함 (보라색, 회색 계열)
+ * 고급스럽고 차분하며 세련된 느낌을 줍니다.
+ */
+/*
+body {
+    background-color: #F5F0F6;
+    color: #4A4E69;
+}
+.main-header {
+    background-color: #4A4E69;
+    border-bottom-color: #9A8C98;
+}
+.main-header nav a:hover {
+    color: #C9ADA7;
+}
+.hero {
+    background: #9A8C98 url('https://via.placeholder.com/1500x400/C9ADA7/4A4E69?text=우아한+배경+이미지') no-repeat center center/cover;
+}
+.btn {
+    background-color: #C9ADA7;
+}
+.btn:hover {
+    background-color: #B29E9A;
+}
+.card {
+    background-color: #FFFFFF;
+    border-color: #D4C4D9;
+}
+.main-footer {
+    background-color: #4A4E69;
+}
+.main-footer .social-links a:hover {
+    color: #C9ADA7;
+}
+*/
