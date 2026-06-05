@@ -1,0 +1,43 @@
+/* 기본 초기화 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    background-color: #F4F6F5; /* 눈이 편안한 옅은 회색빛 그린 */
+    color: #2D3436; 
+    font-family: 'Pretendard', sans-serif;
+    line-height: 1.6;
+}
+
+/* 네비게이션 */
+.navbar { padding: 2rem; font-weight: bold; color: #4A7C59; }
+
+/* 메인 영역 */
+.container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+
+.hero { text-align: center; margin-bottom: 3rem; }
+
+/* 카드 레이아웃: AI 느낌을 줄이기 위해 그림자를 은은하게 처리 */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+
+.card { 
+    background: #FFFFFF; 
+    padding: 1.5rem; 
+    border-radius: 20px; /* 둥근 모서리로 부드러운 인상 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03); /* 아주 연한 그림자 */
+    transition: transform 0.3s ease;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.card-img { 
+    width: 100%; height: 180px; 
+    background: #E8EBE9; /* 자연스러운 배경색 */
+    border-radius: 12px; margin-bottom: 1rem; 
+}
+
+/* 버튼: 튀지 않는 차분한 강조색 사용 */
+.btn { 
+    background: #4A7C59; color: #fff; 
+    border: none; padding: 0.8rem 1.5rem; 
+    border-radius: 50px; /* 둥근 버튼 */
+    cursor: pointer; margin-top: 1rem;
+}
